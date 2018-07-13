@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   # TODO: What is this files thing asking...?
   s.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   s.bindir        = "exe"
-  s.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
+  s.executables   = s.files.grep(%r{^exe/}) { |f| File.basename(f) }
   s.require_paths = ["lib"]
   s.homepage      = 'https://github.com/RaymondFallon/a11y-cop'
   s.license       = 'MIT'
