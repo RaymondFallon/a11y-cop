@@ -1,3 +1,5 @@
+$LOAD_PATH.unshift File.expand_path('lib', __dir__)
+
 Gem::Specification.new do |s|
   s.name          = 'a11y-cop'
   s.version       = '0.0.0'
