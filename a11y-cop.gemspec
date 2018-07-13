@@ -7,7 +7,13 @@ Gem::Specification.new do |s|
   s.authors       = ['Ray Fallon']
   s.email         = 'raymondfallon@gmail.com'
   # TODO: What is this files thing asking...?
-  s.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
+  s.files         = Dir[
+                      '{config,lib,spec}/**/*',
+                      '*.md',
+                      '*.gemspec',
+                      'Gemfile',
+                      'Rakefile'
+                    ]
   s.bindir        = "exe"
   s.executables   = s.files.grep(%r{^exe/}) { |f| File.basename(f) }
   s.require_paths = ["lib"]
